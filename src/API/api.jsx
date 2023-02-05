@@ -11,6 +11,7 @@ export const fetchMoviesById = movieId => {
     .then(r => {
       r.json();
     })
+
     .then(res => {
       return res;
     });
