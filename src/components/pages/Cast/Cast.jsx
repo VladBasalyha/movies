@@ -4,6 +4,7 @@ import { ActorList } from './ActorsList';
 
 export const Cast = () => {
   const { id } = useParams();
+
   const [actorsCast, setCast] = useState([]);
 
   useEffect(() => {
@@ -13,5 +14,6 @@ export const Cast = () => {
       .then(r => r.json())
       .then(({ cast }) => setCast(cast));
   }, []);
+
   return <ActorList actors={actorsCast}></ActorList>;
 };

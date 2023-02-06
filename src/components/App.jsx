@@ -4,6 +4,7 @@ import { DetailedInfoAboutFilm } from './pages/DetailedInfoAboutFilm';
 // import { fetchMovies } from '../API/api';
 import { Cast } from './pages/Cast/Cast';
 import { TrendingFilms } from './pages/TrendingFilms/TrendingFilms';
+import { ReviewComponent } from './pages/Reviews/ReviewComponent';
 export const App = () => {
   return (
     <>
@@ -21,7 +22,10 @@ export const App = () => {
           element={<DetailedInfoAboutFilm></DetailedInfoAboutFilm>}
         >
           <Route path="cast" element={<Cast></Cast>}></Route>
-          <Route path="reviews" element={<div>here reviews</div>}></Route>
+          <Route
+            path="reviews"
+            element={<ReviewComponent></ReviewComponent>}
+          ></Route>
         </Route>
 
         <Route path="/movies" element={<h2>fdsafdsa</h2>}></Route>
