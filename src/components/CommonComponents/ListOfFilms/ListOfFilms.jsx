@@ -6,7 +6,7 @@ export const ListOfFilms = ({ films }) => {
   return (
     <ul>
       {films.map(({ id, poster_path, title, overview }) => (
-        <Link key={id} to={`${id}`}>
+        <Link key={id} to={`movie/${id}`}>
           <Film key={id} image={imageWay + poster_path} title={title}></Film>
         </Link>
       ))}
