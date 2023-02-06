@@ -13,7 +13,7 @@ export const Cast = () => {
     )
       .then(r => r.json())
       .then(({ cast }) => setCast(cast));
-  }, []);
+  }, [id]);
 
   return <ActorList actors={actorsCast}></ActorList>;
 };

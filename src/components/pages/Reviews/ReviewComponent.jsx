@@ -11,7 +11,7 @@ export const ReviewComponent = () => {
     )
       .then(r => r.json())
       .then(res => setReviewsFilm(res.results));
-  }, []);
+  }, [id]);
 
   return <ReviewsList reviews={reviewsOfFilm}></ReviewsList>;
 };

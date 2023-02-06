@@ -40,7 +40,7 @@ export const DetailedInfoAboutFilm = () => {
           setFilmImage(`${pathToImage}${poster_path}`);
         }
       );
-  }, []);
+  }, [id]);
 
   return (
     <AboutMovie
