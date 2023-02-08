@@ -10,7 +10,9 @@ export const DetailedInfoAboutFilm = () => {
   const [filmGenres, setFilmGenres] = useState([]);
   const [filmReleasedYear, setFilmReleasedYear] = useState('no info');
   const [filmImage, setFilmImage] = useState('');
+
   const { id } = useParams();
+
   const toGetOnlyYearOfFilm = date => new Date(date).getFullYear();
   const pathToImage = 'https://image.tmdb.org/t/p/w300';
   useEffect(() => {

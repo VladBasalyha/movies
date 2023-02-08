@@ -11,18 +11,17 @@ import { FilmsByQuery } from './pages/FilmsByQuery/FilmsByQuery';
 import { Header } from './CommonComponents/Header/Header';
 export const App = () => {
   return (
-    <>
+    <div>
       <Routes>
         <Route path="/" element={<Header />}>
-          <Route index element={<TrendingFilms></TrendingFilms>}></Route>
-          <Route path="/movies" element={<FilmsByQuery></FilmsByQuery>}></Route>
-
+          <Route index element={<TrendingFilms />}></Route>
+          <Route path="/movies" element={<FilmsByQuery />}></Route>
           <Route path="/movies/:id" element={<DetailedInfoAboutFilm />}>
-            <Route path="cast" element={<Cast />}></Route>
-            <Route path="reviews" element={<ReviewComponent />}></Route>
+            <Route path="cast" element={<Cast />} />
+            <Route path="reviews" element={<ReviewComponent />} />
           </Route>
         </Route>
       </Routes>
-    </>
+    </div>
   );
 };

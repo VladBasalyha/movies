@@ -10,12 +10,13 @@ export const AboutMovie = ({
   overview,
 }) => {
   const location = useLocation();
-  console.log(location);
-  const backLinkHref = location.state?.from ?? '/';
+  const from = location.state?.from ?? '/';
+
+  // const test = location.state;
 
   return (
     <>
-      <Link to={backLinkHref}>back</Link>
+      <Link to={from}>back</Link>
       <div>
         <img src={movieImage} alt={movieTitle} />
         <p>{movieTitle}</p>
@@ -23,10 +24,14 @@ export const AboutMovie = ({
         <p>{overview}</p>
         <p>{Math.round(movieVotes) * 10}%</p>
         <p>{genres.map(genre => genre.name).join(',')}</p>
-        <Link to="cast">cast</Link>
-        <Link to="reviews">reviews</Link>
+        <Link to="cast" state={{ from }}>
+          cast
+        </Link>
+        <Link to="reviews" state={{ from }}>
+          reviews
+        </Link>
+        <Outlet />
       </div>
-      <Outlet />
     </>
   );
 };

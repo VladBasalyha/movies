@@ -4,7 +4,7 @@ import { Film } from '../Film/Film';
 import defaultImage from 'forDefaultValues/png-transparent-clapperboard-computer-icons-film-movie-poster-angle-text-logo-thumbnail.png';
 export const ListOfFilms = ({ films }) => {
   const location = useLocation();
-  console.log(location);
+
   const imageWay = 'https://image.tmdb.org/t/p/w300';
   return (
     <ul>
@@ -14,7 +14,6 @@ export const ListOfFilms = ({ films }) => {
             key={id}
             image={!poster_path ? defaultImage : imageWay + poster_path}
             title={title}
-            id={undefined}
           ></Film>
         </Link>
       ))}

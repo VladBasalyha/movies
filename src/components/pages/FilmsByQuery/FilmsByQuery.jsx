@@ -43,7 +43,11 @@ export const FilmsByQuery = () => {
       </form>
 
       <div>
-        <ListOfFilms films={films}></ListOfFilms>
+        {films.length === 0 ? (
+          <h1>No films</h1>
+        ) : (
+          <ListOfFilms films={films}></ListOfFilms>
+        )}
       </div>
     </>
   );
