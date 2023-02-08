@@ -1,7 +1,7 @@
 import { AboutMovie } from 'components/CommonComponents/Film/AboutMovie';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import defaultImg from '../pages/forDefaultValues/png-transparent-clapperboard-computer-icons-film-movie-poster-angle-text-logo-thumbnail.png';
+import defaultImg from 'forDefaultValues/png-transparent-clapperboard-computer-icons-film-movie-poster-angle-text-logo-thumbnail.png';
 
 export const DetailedInfoAboutFilm = () => {
   const [filmTitle, setFilmTitle] = useState('');
@@ -32,9 +32,13 @@ export const DetailedInfoAboutFilm = () => {
           }
 
           setFilmTitle(title);
+
           setFilmVotes(vote_average);
+
           setFilmGenres(genres);
+
           setFilmOverview(overview);
+
           setFilmReleasedYear(release_date);
 
           setFilmImage(`${pathToImage}${poster_path}`);

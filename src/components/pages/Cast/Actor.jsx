@@ -1,4 +1,4 @@
-import img from '../forDefaultValues/png-transparent-clapperboard-computer-icons-film-movie-poster-angle-text-logo-thumbnail.png';
+import img from 'forDefaultValues/png-transparent-clapperboard-computer-icons-film-movie-poster-angle-text-logo-thumbnail.png';
 export const Actor = ({ photo = img, name, character, id }) => {
   const pathToImage = 'https://image.tmdb.org/t/p/w300';
   return (

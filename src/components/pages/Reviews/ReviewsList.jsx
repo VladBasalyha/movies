@@ -8,7 +8,7 @@ export const ReviewsList = ({ reviews }) => {
       ) : (
         reviews.map(({ id, author, content }) => {
           return (
-            <ul>
+            <ul key={id}>
               <Review key={id} review={content} reviewer={author}></Review>
             </ul>
           );
