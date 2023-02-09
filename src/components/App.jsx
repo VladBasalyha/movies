@@ -6,7 +6,7 @@ const FilmsByQuery = lazy(() => import('./pages/FilmsByQuery/FilmsByQuery'));
 const DetailedInfoAboutFilm = lazy(() =>
   import('./pages/DetailedInfoAboutFilm')
 );
-const TrendingFilms = lazy(() => import('./pages/TrendingFilms/TrendingFilms'));
+const TrendingFilms = lazy(() => import('./pages/TrendingFilms/Home'));
 const Cast = lazy(() => import('../components/pages/Cast/Cast'));
 const ReviewComponent = lazy(() => import('./pages/Reviews/ReviewComponent'));
 
