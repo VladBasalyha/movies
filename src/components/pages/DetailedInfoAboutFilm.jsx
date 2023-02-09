@@ -6,9 +6,9 @@ import defaultImg from 'forDefaultValues/png-transparent-clapperboard-computer-i
 export const DetailedInfoAboutFilm = () => {
   const [filmTitle, setFilmTitle] = useState('');
   const [filmOverview, setFilmOverview] = useState('');
-  const [filmVotes, setFilmVotes] = useState('no votes');
+  const [filmVotes, setFilmVotes] = useState(0);
   const [filmGenres, setFilmGenres] = useState([]);
-  const [filmReleasedYear, setFilmReleasedYear] = useState('no info');
+  const [filmReleasedYear, setFilmReleasedYear] = useState(0);
   const [filmImage, setFilmImage] = useState('');
 
   const { id } = useParams();

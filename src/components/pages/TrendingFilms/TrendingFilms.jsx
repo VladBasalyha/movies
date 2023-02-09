@@ -7,7 +7,7 @@ export const TrendingFilms = () => {
     fetchTrendingMovies().then(films => {
       setTrendingFilms(films.results);
     });
-  }, []);
+  }, [] );
 
   return <ListOfFilms films={trendingFilms}></ListOfFilms>;
 };

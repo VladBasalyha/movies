@@ -1,0 +1,7 @@
+.filmCard {
+  transition: 250ms;
+}
+.filmCard:hover {
+  box-shadow: 0 6px 18px 0 rgba(#000, 0.3);
+  transform: translateY(-6px);
+}

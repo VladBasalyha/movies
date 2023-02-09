@@ -1,12 +1,13 @@
+import { Container, Row } from 'react-bootstrap';
 import { Actor } from './Actor';
 
 export const ActorList = ({ actors }) => {
   return (
-    <>
+    <Container>
       {actors.length === 0 ? (
         <p>no info about actors</p>
       ) : (
-        <ul>
+        <Row className="justify-content-center" xs="auto">
           {actors.map(actor => (
             <Actor
               key={actor.id}
@@ -15,8 +16,8 @@ export const ActorList = ({ actors }) => {
               name={actor.name}
             ></Actor>
           ))}
-        </ul>
+        </Row>
       )}
-    </>
+    </Container>
   );
 };

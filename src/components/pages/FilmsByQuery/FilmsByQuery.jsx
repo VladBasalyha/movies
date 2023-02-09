@@ -1,6 +1,7 @@
 import { ListOfFilms } from 'components/CommonComponents/ListOfFilms/ListOfFilms';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
+import { Button, Container, Row } from 'react-bootstrap';
 
 export const FilmsByQuery = () => {
   // const [searchInputValue, setInputValue] = useState('');
@@ -35,12 +36,14 @@ export const FilmsByQuery = () => {
   };
 
   return (
-    <>
-      <form onSubmit={onSearchSubmit}>
-        <label htmlFor="film">Search Films</label>
-        <input type="text" id="film" name="film"></input>
-        <button>Search</button>
-      </form>
+    <Container>
+      <div>
+        <form onSubmit={onSearchSubmit}>
+          <label htmlFor="film">Search Films</label>
+          <input type="text" id="film" name="film"></input>
+          <Button variant="info">Search</Button>
+        </form>
+      </div>
 
       <div>
         {films.length === 0 ? (
@@ -49,6 +52,6 @@ export const FilmsByQuery = () => {
           <ListOfFilms films={films}></ListOfFilms>
         )}
       </div>
-    </>
+    </Container>
   );
 };

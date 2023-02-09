@@ -1,0 +1,18 @@
+@media (min-width: 550px) {
+  .movieInfo {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 549px) {
+  .movieInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+  }
+}

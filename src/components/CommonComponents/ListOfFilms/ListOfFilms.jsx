@@ -2,21 +2,24 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Film } from '../Film/Film';
 import defaultImage from 'forDefaultValues/png-transparent-clapperboard-computer-icons-film-movie-poster-angle-text-logo-thumbnail.png';
+import { Container, Row, Col, Stack } from 'react-bootstrap';
 export const ListOfFilms = ({ films }) => {
   const location = useLocation();
 
   const imageWay = 'https://image.tmdb.org/t/p/w300';
   return (
-    <ul>
-      {films.map(({ id, poster_path, title }) => (
-        <Link key={id} to={`/movies/${id}`} state={{ from: location }}>
-          <Film
-            key={id}
-            image={!poster_path ? defaultImage : imageWay + poster_path}
-            title={title}
-          ></Film>
-        </Link>
-      ))}
-    </ul>
+    <Container>
+      <Row className="justify-content-center" xs="auto">
+        {films.map(({ id, poster_path, title }) => (
+          <Link key={id} to={`/movies/${id}`} state={{ from: location }}>
+            <Film
+              key={id}
+              image={!poster_path ? defaultImage : imageWay + poster_path}
+              title={title}
+            ></Film>
+          </Link>
+        ))}
+      </Row>
+    </Container>
   );
 };
