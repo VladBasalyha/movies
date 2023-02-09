@@ -1,6 +1,5 @@
 import css from '../Reviews/Review.module.css';
 import PropTypes from 'prop-types';
-import { propTypes } from 'react-bootstrap/esm/Image';
 
 const Review = ({ review, reviewer }) => {
   return (
