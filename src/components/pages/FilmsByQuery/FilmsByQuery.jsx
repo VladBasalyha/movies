@@ -1,9 +1,9 @@
-import { ListOfFilms } from 'components/CommonComponents/ListOfFilms/ListOfFilms';
+import ListOfFilms from 'components/CommonComponents/ListOfFilms/ListOfFilms';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Alert, Button, Container } from 'react-bootstrap';
 
-export const FilmsByQuery = () => {
+const FilmsByQuery = () => {
   // const [searchInputValue, setInputValue] = useState('');
   const [films, setFilms] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
@@ -57,3 +57,4 @@ export const FilmsByQuery = () => {
     </Container>
   );
 };
+export default FilmsByQuery;

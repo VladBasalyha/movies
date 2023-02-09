@@ -1,8 +1,8 @@
 import { Alert, Container, Row } from 'react-bootstrap';
-import { Actor } from './Actor';
+import Actor from './Actor';
 import React from 'react';
 
-export const ActorList = ({ actors }) => {
+const ActorsList = ({ actors }) => {
   return (
     <Container>
       {actors.length === 0 ? (
@@ -23,3 +23,4 @@ export const ActorList = ({ actors }) => {
     </Container>
   );
 };
+export default ActorsList;

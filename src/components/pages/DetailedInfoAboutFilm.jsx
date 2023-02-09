@@ -1,9 +1,9 @@
-import { AboutMovie } from 'components/CommonComponents/Film/AboutMovie';
+import AboutMovie from 'components/CommonComponents/Film/AboutMovie';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import defaultImg from 'forDefaultValues/png-transparent-clapperboard-computer-icons-film-movie-poster-angle-text-logo-thumbnail.png';
 
-export const DetailedInfoAboutFilm = () => {
+const DetailedInfoAboutFilm = () => {
   const [filmTitle, setFilmTitle] = useState('');
   const [filmOverview, setFilmOverview] = useState('');
   const [filmVotes, setFilmVotes] = useState(0);
@@ -59,3 +59,4 @@ export const DetailedInfoAboutFilm = () => {
     ></AboutMovie>
   );
 };
+export default DetailedInfoAboutFilm;

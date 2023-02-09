@@ -1,13 +1,14 @@
-import React from 'react';
-// import { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { DetailedInfoAboutFilm } from './pages/DetailedInfoAboutFilm';
-// import { fetchMovies } from '../API/api';
-import { Cast } from './pages/Cast/Cast';
-import { TrendingFilms } from './pages/TrendingFilms/TrendingFilms';
-import { ReviewComponent } from './pages/Reviews/ReviewComponent';
-import { FilmsByQuery } from './pages/FilmsByQuery/FilmsByQuery';
+import React, { lazy } from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { Header } from './CommonComponents/Header/Header';
+
+const FilmsByQuery = lazy(() => import('./pages/FilmsByQuery/FilmsByQuery'));
+const DetailedInfoAboutFilm = lazy(() =>
+  import('./pages/DetailedInfoAboutFilm')
+);
+const TrendingFilms = lazy(() => import('./pages/TrendingFilms/TrendingFilms'));
+const Cast = lazy(() => import('../components/pages/Cast/Cast'));
+const ReviewComponent = lazy(() => import('./pages/Reviews/ReviewComponent'));
 
 export const App = () => {
   return (
@@ -20,6 +21,7 @@ export const App = () => {
             <Route path="cast" element={<Cast />} />
             <Route path="reviews" element={<ReviewComponent />} />
           </Route>
+          <Route path="*" element={<Navigate to="/" />} />
         </Route>
       </Routes>
     </div>

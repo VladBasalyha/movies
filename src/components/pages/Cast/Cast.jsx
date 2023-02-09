@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { ActorList } from './ActorsList';
+import ActorList from './ActorsList';
 
-export const Cast = () => {
+const Cast = () => {
   const { id } = useParams();
 
   const [actorsCast, setCast] = useState([]);
@@ -17,3 +17,4 @@ export const Cast = () => {
 
   return <ActorList actors={actorsCast}></ActorList>;
 };
+export default Cast;

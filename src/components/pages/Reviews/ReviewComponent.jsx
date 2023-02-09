@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { ReviewsList } from './ReviewsList';
+import ReviewsList from './ReviewsList';
 
-export const ReviewComponent = () => {
+const ReviewComponent = () => {
   const { id } = useParams();
   const [reviewsOfFilm, setReviewsFilm] = useState([]);
   useEffect(() => {
@@ -15,3 +15,4 @@ export const ReviewComponent = () => {
 
   return <ReviewsList reviews={reviewsOfFilm}></ReviewsList>;
 };
+export default ReviewComponent;

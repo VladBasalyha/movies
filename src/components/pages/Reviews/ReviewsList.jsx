@@ -1,7 +1,7 @@
 import { Alert } from 'react-bootstrap';
-import { Review } from './Review';
+import Review from './Review';
 
-export const ReviewsList = ({ reviews }) => {
+const ReviewsList = ({ reviews }) => {
   return (
     <>
       {reviews.length === 0 ? (
@@ -18,3 +18,4 @@ export const ReviewsList = ({ reviews }) => {
     </>
   );
 };
+export default ReviewsList;

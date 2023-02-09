@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import css from '../Film/AboutMovie.module.css';
 import { Button, ButtonGroup, Container } from 'react-bootstrap';
 import { Link, Outlet, useLocation } from 'react-router-dom';
+import { ClockLoader } from 'react-spinners';
 
-export const AboutMovie = ({
+const AboutMovie = ({
   movieImage,
   movieTitle,
   movieYearRelease = 0,
@@ -47,10 +48,12 @@ export const AboutMovie = ({
               </Link>
             </Button>
           </ButtonGroup>
-
-          <Outlet />
+          <Suspense fallback={<ClockLoader></ClockLoader>}>
+            <Outlet />
+          </Suspense>
         </div>
       </Container>
     </>
   );
 };
+export default AboutMovie;

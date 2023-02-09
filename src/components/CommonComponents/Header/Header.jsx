@@ -2,6 +2,8 @@ import { Navbar, Nav, Button, Container, Stack } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Link, Outlet } from 'react-router-dom';
+import { Suspense } from 'react';
+import ClockLoader from 'react-spinners/ClockLoader';
 
 export const Header = () => {
   return (
@@ -22,7 +24,13 @@ export const Header = () => {
           </Navbar>
         </header>
       </Container>
-      <Outlet />
+      <Suspense
+        fallback={
+          <ClockLoader size={100} color="rgba(74, 98, 208, 1)"></ClockLoader>
+        }
+      >
+        <Outlet />
+      </Suspense>
     </>
   );
 };

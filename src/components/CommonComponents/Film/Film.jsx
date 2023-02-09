@@ -1,5 +1,5 @@
 import css from '../Film/Film.module.css';
-export const Film = ({ id, image, title }) => {
+const Film = ({ id, image, title }) => {
   return (
     <li className={css.filmCard} key={id}>
       <img src={image} alt={title} />
@@ -7,3 +7,4 @@ export const Film = ({ id, image, title }) => {
     </li>
   );
 };
+export default Film;
