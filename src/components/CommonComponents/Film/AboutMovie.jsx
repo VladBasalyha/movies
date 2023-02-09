@@ -19,13 +19,13 @@ export const AboutMovie = ({
   return (
     <>
       <Container>
-        <Button variant="secondary">
+        <Button className="m-2" variant="secondary">
           <Link to={from}>back</Link>
         </Button>
         <div>
           <div className={css.movieInfo}>
             <div>
-              <img src={movieImage} alt={movieTitle} />
+              <img width="200" height="100" src={movieImage} alt={movieTitle} />
             </div>
             <div>
               <p>{movieTitle}</p>
@@ -35,7 +35,7 @@ export const AboutMovie = ({
               <p>{genres.map(genre => genre.name).join(',')}</p>
             </div>
           </div>
-          <ButtonGroup>
+          <ButtonGroup className="p-2">
             <Button variant="secondary">
               <Link to="cast" state={{ from }}>
                 cast

@@ -9,7 +9,7 @@ export const ListOfFilms = ({ films }) => {
   const imageWay = 'https://image.tmdb.org/t/p/w300';
   return (
     <Container>
-      <Row className="justify-content-center" xs="auto">
+      <Row className="justify-content-center p-3" xs="auto">
         {films.map(({ id, poster_path, title }) => (
           <Link key={id} to={`/movies/${id}`} state={{ from: location }}>
             <Film

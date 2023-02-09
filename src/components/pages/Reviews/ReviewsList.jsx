@@ -1,14 +1,15 @@
+import { Alert } from 'react-bootstrap';
 import { Review } from './Review';
 
 export const ReviewsList = ({ reviews }) => {
   return (
     <>
       {reviews.length === 0 ? (
-        <article>no reviews</article>
+        <Alert variant="info">No reviews</Alert>
       ) : (
         reviews.map(({ id, author, content }) => {
           return (
-            <ul key={id}>
+            <ul className="p-0" key={id}>
               <Review key={id} review={content} reviewer={author}></Review>
             </ul>
           );

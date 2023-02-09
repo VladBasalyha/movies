@@ -1,7 +1,7 @@
 import { ListOfFilms } from 'components/CommonComponents/ListOfFilms/ListOfFilms';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { Button, Container, Row } from 'react-bootstrap';
+import { Alert, Button, Container, Row } from 'react-bootstrap';
 
 export const FilmsByQuery = () => {
   // const [searchInputValue, setInputValue] = useState('');
@@ -24,12 +24,12 @@ export const FilmsByQuery = () => {
     e.preventDefault();
     const form = e.currentTarget;
     if (form.elements.film.value === movieName) {
-      alert('fdsafsda');
+      alert('you`ve already searched this');
       return;
     }
     if (form.elements.film.value === '') {
-      alert('type smth');
-      return {};
+      alert('type something');
+      return;
     } else {
       setSearchParams({ movieName: form.elements.film.value });
     }
@@ -38,16 +38,18 @@ export const FilmsByQuery = () => {
   return (
     <Container>
       <div>
-        <form onSubmit={onSearchSubmit}>
+        <form className="m-2" onSubmit={onSearchSubmit}>
           <label htmlFor="film">Search Films</label>
           <input type="text" id="film" name="film"></input>
-          <Button variant="info">Search</Button>
+          <Button type="submit" variant="info">
+            Search
+          </Button>
         </form>
       </div>
 
       <div>
         {films.length === 0 ? (
-          <h1>No films</h1>
+          <Alert variant="info">No films weren`t found yet</Alert>
         ) : (
           <ListOfFilms films={films}></ListOfFilms>
         )}
