@@ -1,5 +1,6 @@
 import { Alert } from 'react-bootstrap';
 import Review from './Review';
+import PropTypes from 'prop-types'; // ES6
 
 const ReviewsList = ({ reviews }) => {
   return (
@@ -17,5 +18,8 @@ const ReviewsList = ({ reviews }) => {
       )}
     </>
   );
+};
+ReviewsList.propTypes = {
+  reviews: PropTypes.array.isRequired,
 };
 export default ReviewsList;

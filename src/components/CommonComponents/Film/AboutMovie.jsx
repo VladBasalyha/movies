@@ -1,4 +1,6 @@
 import React, { Suspense } from 'react';
+import PropTypes from 'prop-types'; // ES6
+
 import css from '../Film/AboutMovie.module.css';
 import { Button, ButtonGroup, Container } from 'react-bootstrap';
 import { Link, Outlet, useLocation } from 'react-router-dom';
@@ -55,5 +57,13 @@ const AboutMovie = ({
       </Container>
     </>
   );
+};
+AboutMovie.propTypes = {
+  movieImage: PropTypes.string.isRequired,
+  movieTitle: PropTypes.string.isRequired,
+  movieYearRelease: PropTypes.number.isRequired,
+  movieVotes: PropTypes.number.isRequired,
+  genres: PropTypes.array.isRequired,
+  overview: PropTypes.string.isRequired,
 };
 export default AboutMovie;

@@ -1,8 +1,11 @@
 import css from '../Reviews/Review.module.css';
-const Review = ({ id, review, reviewer }) => {
+import PropTypes from 'prop-types';
+import { propTypes } from 'react-bootstrap/esm/Image';
+
+const Review = ({ review, reviewer }) => {
   return (
     <div className={css.reviewWrapper}>
-      <li key={id}>
+      <li>
         <span className={css.review}>Reviewer:</span>
         <p>{reviewer}</p>
 
@@ -10,5 +13,9 @@ const Review = ({ id, review, reviewer }) => {
       </li>
     </div>
   );
+};
+Review.propTypes = {
+  review: PropTypes.string.isRequired,
+  reviewer: PropTypes.string.isRequired,
 };
 export default Review;

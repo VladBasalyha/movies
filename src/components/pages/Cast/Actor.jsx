@@ -1,4 +1,6 @@
 import img from 'forDefaultValues/png-transparent-clapperboard-computer-icons-film-movie-poster-angle-text-logo-thumbnail.png';
+import PropTypes from 'prop-types'; // ES6
+
 const Actor = ({ photo = img, name = 'name', character = 'character', id }) => {
   const pathToImage = 'https://image.tmdb.org/t/p/w300';
   return (
@@ -10,5 +12,10 @@ const Actor = ({ photo = img, name = 'name', character = 'character', id }) => {
       </div>
     </li>
   );
+};
+Actor.propTypes = {
+  photo: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  character: PropTypes.string.isRequired,
 };
 export default Actor;

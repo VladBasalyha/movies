@@ -3,6 +3,8 @@ import { Link, useLocation } from 'react-router-dom';
 import Film from '../Film/Film';
 import defaultImage from 'forDefaultValues/png-transparent-clapperboard-computer-icons-film-movie-poster-angle-text-logo-thumbnail.png';
 import { Container, Row } from 'react-bootstrap';
+import PropTypes from 'prop-types';
+
 const ListOfFilms = ({ films }) => {
   const location = useLocation();
 
@@ -22,5 +24,8 @@ const ListOfFilms = ({ films }) => {
       </Row>
     </Container>
   );
+};
+ListOfFilms.propTypes = {
+  films: PropTypes.array.isRequired,
 };
 export default ListOfFilms;

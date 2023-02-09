@@ -1,4 +1,6 @@
 import { Alert, Container, Row } from 'react-bootstrap';
+import PropTypes from 'prop-types'; // ES6
+
 import Actor from './Actor';
 import React from 'react';
 
@@ -22,5 +24,8 @@ const ActorsList = ({ actors }) => {
       )}
     </Container>
   );
+};
+ActorsList.propTypes = {
+  actors: PropTypes.array.isRequired,
 };
 export default ActorsList;
