@@ -1,7 +1,7 @@
 import { ListOfFilms } from 'components/CommonComponents/ListOfFilms/ListOfFilms';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { Alert, Button, Container, Row } from 'react-bootstrap';
+import { Alert, Button, Container } from 'react-bootstrap';
 
 export const FilmsByQuery = () => {
   // const [searchInputValue, setInputValue] = useState('');

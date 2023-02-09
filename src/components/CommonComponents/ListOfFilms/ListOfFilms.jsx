@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Film } from '../Film/Film';
 import defaultImage from 'forDefaultValues/png-transparent-clapperboard-computer-icons-film-movie-poster-angle-text-logo-thumbnail.png';
-import { Container, Row, Col, Stack } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 export const ListOfFilms = ({ films }) => {
   const location = useLocation();
 
